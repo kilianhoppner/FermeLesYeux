@@ -91,7 +91,7 @@
         position: relative;
         margin: auto;
         display: block;
-        width: 80%; /* Set width of modal content */
+        width: 100%; /* Set width of modal content */
         max-width: 100%; /* Max width of modal content */
         /* margin-top: 2.5%;
         margin-bottom: 2.5%; */
@@ -110,6 +110,7 @@
         color: rgb(204, 191, 191);
         font-size: 40px;
         font-weight: bold;
+        z-index: 9999;
       }
   
       /* Close button hover effect */
