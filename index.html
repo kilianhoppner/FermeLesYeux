@@ -4,150 +4,50 @@
   <meta charset="UTF-8">
   <title>Ferme Les Yeux</title>
   <link rel="icon" type="text/css" href="Favicon/redSquare.png">
-  <link rel="stylesheet" href="styling.css">
-  <style>
-    @font-face {
-      font-family: 'AdobeCaslon';
-      src: url('Typefaces/Caslon/CaslonRegular.otf');
-    }
+  <link rel="stylesheet" href="index.css">
 
-    body {
-      background-color: #000000;
-      display: flex;
-      margin: 0;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin-bottom: 0%;
-      /* cursor:url("Cursor/GreyCircle.png"), auto; */
-      font-family: 'AdobeCaslon', sans-serif; /* Apply custom font to the body */
-    }
-
-    .Header {
-      position: absolute;
-      top: 5.1%; /* Adjust as needed */
-      left: 17%; /* Adjust as needed */
-      color: rgb(204, 191, 191); /* Set text color */
-      font-size: 165%; /* Set font size */
-    }
-
-    .subHeader {
-      position: absolute;
-      top: 9%; /* Adjust as needed */
-      left: 17%; /* Adjust as needed */
-      color: rgb(204, 191, 191); /* Set text color */
-      font-size: 100%; /* Set font size */
-    }
-
-    
-    
-    .bodyText {
-      position: absolute;
-      top: 13.9%; /* Adjust as needed */
-      left: 17%; /* Adjust as needed */
-      color: rgb(204, 191, 191); /* Set text color */
-      font-size: 80%; /* Set font size */
-      margin-right: 64.5%;
-    }
-
-
-    .fermelesyeux {
-      position: relative;
-      top: 45.9%;
-      left: 14%;
-      width: 10.4%;
-      height: auto;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-    }
-
-    .fermelesyeux:hover {
-      opacity: 0.85; /* Reduce opacity on hover */
-    }
-
-
-    /* Modal styles */
-    .modal {
-      display: none; /* Hide modal by default */
-      position: fixed;
-      z-index: 9999; /* Ensure modal appears on top */
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
-      overflow: auto; /* Enable scrolling */
-    }
-
-    .modal-content {
-      position: relative;
-      margin: auto;
-      display: block;
-      width: 80%; /* Set width of modal content */
-      max-width: 800px; /* Max width of modal content */
-    }
-
-    .modal-content img {
-      width: 100%; /* Ensure image fills modal content */
-      display: block;
-    }
-
-    /* Close button styles */
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 35px;
-      color: rgb(204, 191, 191);
-      font-size: 40px;
-      font-weight: bold;
-    }
-
-    /* Close button hover effect */
-    .close:hover,
-    .close:focus {
-      color: rgb(157, 153, 153);
-      text-decoration: none;
-    }
-  </style>
 </head>
+
 <body>
 
-<!-- Add text element with custom font -->
-<div class="Header">Ferme Les Yeux</div>
-<div class="subHeader">by Elena Sanchez Ascencio & Kilian Höppner</div>
-<div class="bodyText"><em>Ferme Les Yeux</em> is a scroll examining themes of introspection, self-discovery and the pursuit of inner peace. It intricately weaves together excerpts from the book <em>Siddhartha</em> by Hermann Hesse, leveraging its profound insights to delve into the fluidity of relationships. Through Siddhartha's journey, it navigates the ever-changing dynamics of human connections, illuminating the enduring nature of bonds and the profound impact they have on individual growth and understanding.</div>
-
-<!-- Your image -->
-<img class="fermelesyeux" src="FermeLesYeux.png">
-
-<!-- Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <div class="modal-content">
-    <img src="FermeLesYeux.png">
+  <div class="folio-item">
+    <div>
+    <p class="header">Ferme Les Yeux</p>
+    <p class="subheader">by Elena Sanchez Ascencio & Kilian Höppner</p>
+    <p class="body"><em>Ferme Les Yeux</em> is a scroll examining themes of introspection, self-discovery and the pursuit of inner peace. It intricately weaves together excerpts from the book <em>Siddhartha</em> by Hermann Hesse, leveraging its profound insights to delve into the fluidity of relationships. Through Siddhartha's journey, it navigates the ever-changing dynamics of human connections, illuminating the enduring nature of bonds and the profound impact they have on individual growth and understanding.</p>
+    </div>  
+    <img class="fermelesyeux" src="FermeLesYeux.png">
   </div>
-</div>
 
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="">
+    </div>
+  </div>
 
-  // Get the image and insert it inside the modal
-  var img = document.querySelector('.fermelesyeux');
-  var modalImg = document.querySelector('.modal-content img');
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  }
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+    // Get the image and insert it inside the modal
+    var img = document.querySelector('.fermelesyeux');
+    var modalImg = document.getElementById('modalImage');
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() { 
-    modal.style.display = "none";
-  }
-</script>
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
+        
